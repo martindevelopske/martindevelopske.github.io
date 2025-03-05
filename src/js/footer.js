@@ -6,6 +6,9 @@ async function LoadFooter() {
   const cssLink = document.createElement("link");
   cssLink.rel = "stylesheet";
   cssLink.href = "../styles/footer.css";
+  cssLink.onload = () => {
+    document.querySelector("footer").style.visibility = "visible";
+  };
   document.head.appendChild(cssLink);
 }
 

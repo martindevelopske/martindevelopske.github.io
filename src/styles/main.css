@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&display=swap');
 
 :root {
     /* font families */
@@ -39,8 +39,15 @@ body {
     height: 100%;
     /* Full height of viewport */
     margin: 0;
+    width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
+}
+
+header,
+footer {
+    visibility: hidden;
 }
 
 body {
@@ -51,11 +58,7 @@ body {
     transition: background 0.3s, color 0.3s;
     margin: 0;
     padding: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
     overflow-x: hidden;
-    height: 100%;
 }
 
 a {
@@ -70,5 +73,8 @@ a:hover {
 }
 
 main {
+    line-height: 1.9;
+    width: 70%;
     flex-grow: 1;
+    padding-top: 50px;
 }

@@ -7,6 +7,9 @@ async function loadHeader() {
   const cssLink = document.createElement("link");
   cssLink.rel = "stylesheet";
   cssLink.href = "../styles/header.css";
+  cssLink.onload = () => {
+    document.querySelector("header").style.visibility = "visible";
+  };
   document.head.appendChild(cssLink);
 
   loadTheme();
