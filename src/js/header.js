@@ -1,12 +1,12 @@
 async function loadHeader() {
-  const response = await fetch("../components/header.html");
+  const response = await fetch("/src/components/header.html");
   const headerHtml = await response.text();
   document.body.insertAdjacentHTML("afterbegin", headerHtml);
 
   //load the styles
   const cssLink = document.createElement("link");
   cssLink.rel = "stylesheet";
-  cssLink.href = "../styles/header.css";
+  cssLink.href = "/src/styles/header.css";
   cssLink.onload = () => {
     document.querySelector("header").style.visibility = "visible";
   };
@@ -32,9 +32,17 @@ function loadTheme() {
       : "light");
 
   document.documentElement.setAttribute("data-theme", savedTheme);
-  themeToggleBtn.textContent =
-    savedTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
-
+  //themeToggleBtn.textContent =
+  //  savedTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+  //
+  themeToggleBtn.innerHTML =
+    savedTheme === "dark"
+      ? `
+    <i class="fa-solid fa-sun"></i> 
+    `
+      : `
+      <i class="fa-solid fa-moon"></i>
+    `;
   // Toggle theme on button click
   themeToggleBtn.addEventListener("click", () => {
     const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -42,8 +50,16 @@ function loadTheme() {
 
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
-    themeToggleBtn.textContent =
-      newTheme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+    themeToggleBtn.innerHTML =
+      savedTheme === "dark"
+        ? `
+
+      <i class="fa-solid fa-moon"></i>
+    `
+        : `
+
+    <i class="fa-solid fa-sun"></i> 
+    `;
   });
 
   console.log("Theme script initialized!");

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@300;400;500;700&display=swap');
 
 :root {
     /* font families */
@@ -14,7 +14,7 @@
     --background-color: white;
     --text-color: black;
     --primary-color: green;
-    --header-bg: black;
+    --header-bg: #e3e3e3;
     --header-height: 100px;
     --link-color: blue;
     /* Default link color */
@@ -36,7 +36,7 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     /* Full height of viewport */
     margin: 0;
     width: 100%;
@@ -52,13 +52,16 @@ footer {
 
 body {
     font-family: var(--font-primary);
+    font-weight: 300;
     font-size: var(--font-size-base);
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background 0.3s, color 0.3s;
     margin: 0;
-    padding: 0;
+    padding-top: var(--header-height);
+    padding-bottom: var(--header-height);
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 a {
@@ -76,5 +79,21 @@ main {
     line-height: 1.9;
     width: 70%;
     flex-grow: 1;
-    padding-top: 50px;
+    padding-top: 20px;
+}
+
+/* Tablets and small desktops (768px - 1024px) */
+@media (max-width: 1024px) {}
+
+/* Mobile phones (up to 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+
 }
