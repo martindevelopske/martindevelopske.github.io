@@ -17,6 +17,7 @@
     --header-bg: #e3e3e3;
     --header-height: 100px;
     --link-color: blue;
+    --gradient-top: #282a35;
     /* Default link color */
     --link-hover-color: darkblue;
     /* Default hover color */
@@ -36,7 +37,7 @@
 
 html,
 body {
-    margin: 0;
+    margin: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -61,10 +62,17 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     height: auto;
+    width: 100%;
     min-height: calc(100vh - (2 * var(--header-height)));
     /* Full height of viewport */
 
 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
@@ -79,6 +87,7 @@ a:hover {
 }
 
 main {
+    flex-grow: 1;
     line-height: 1.9;
     width: 70%;
     height: 100%;
@@ -88,6 +97,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.hero-container {
+    background: linear-gradient(to bottom, var(--gradient-top), var(--background-color));
 }
 
 .contact-container {
@@ -113,10 +126,27 @@ main {
 @media (max-width: 767px) {
     body {
         font-size: 0.9rem;
+        align-items: stretch;
     }
 
     .logo {
         font-size: 1rem;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        padding-top: 20px;
+        padding: 10px;
+        justify-content: start;
+    }
+
+    .title-bar {
+        width: 100%;
+    }
+
+    .title-bar h3 {
+        font-size: 0.9rem;
     }
 
 
