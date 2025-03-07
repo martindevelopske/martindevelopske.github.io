@@ -36,8 +36,6 @@
 
 html,
 body {
-    min-height: 100%;
-    /* Full height of viewport */
     margin: 0;
     width: 100%;
     display: flex;
@@ -59,9 +57,14 @@ body {
     transition: background 0.3s, color 0.3s;
     margin: 0;
     padding-top: var(--header-height);
-    padding-bottom: var(--header-height);
+    /*padding-bottom: var(--header-height);*/
     overflow-x: hidden;
     overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - (2 * var(--header-height)));
+    /* Full height of viewport */
+
+
 }
 
 a {
@@ -78,8 +81,17 @@ a:hover {
 main {
     line-height: 1.9;
     width: 70%;
+    height: 100%;
     flex-grow: 1;
     padding-top: 20px;
+    padding: 10px;
+}
+
+.contact-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    gap: 2;
 }
 
 /* Tablets and small desktops (768px - 1024px) */

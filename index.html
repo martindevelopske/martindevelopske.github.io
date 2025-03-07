@@ -1,56 +1,64 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Martin Ndung'u</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Martin Ndung'u</title>
+    <link href="src/styles/main.css" rel="stylesheet" />
+    <link href="src/styles/home.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/c6b912491d.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="src/js/header.js" defer></script>
+    <script src="src/js/footer.js" defer></script>
+    <script src="src/js/contact-form.js" defer></script>
+    <script src="src/js/work-banner.js" defer></script>
+    <!--<script src="../js/theme.js"></script>-->
+  </head>
 
-  <link href="src/styles/main.css" rel="stylesheet" />
-  <link href="src/styles/home.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/c6b912491d.js" crossorigin="anonymous" defer></script>
-  <script src="src/js/header.js" defer></script>
-  <script src="src/js/footer.js" defer></script>
-  <!--<script src="../js/theme.js"></script>-->
-</head>
+  <body>
+    <main>
+      <div class="hero-container">
+        <p>
+          <span> 👋 Hey, I'm Martin Ndung'u </span> <br />
+          I believe technology is more than just code—it’s a tool for building
+          better, smarter, and more efficient solutions. I love turning ideas
+          into reality, breaking down complex problems, and refining systems to
+          work seamlessly. Every project is like a puzzle, and I enjoy the
+          process of figuring out how all the pieces fit together to create
+          something meaningful. <br />
+          Curiosity fuels me. I’m always learning, experimenting, and pushing my
+          skills further. Whether it’s exploring new concepts, optimizing
+          workflows, or improving existing solutions, I’m driven by the
+          challenge of making things better. I thrive in spaces where innovation
+          meets practicality, where creativity meets logic, and where every
+          problem is an opportunity for growth.
+          <br />
+          At the core of my work is a deep passion for building and improving.
+          Because in the end, it’s not just about what you create—it’s about the
+          impact it makes and the value it brings.
+        </p>
+      </div>
+      <div class="recent-articles-container">
+        <h3 style="color: var(--primary-color)">Recent Articles</h3>
+        <div>recent articles fall here</div>
 
-<body>
-  <main>
-    <div class="hero-container">
-      <p>
-        <span> 👋 Hey, I'm Martin Ndung'u </span> <br />
-        I believe technology is more than just code—it’s a tool for building
-        better, smarter, and more efficient solutions. I love turning ideas
-        into reality, breaking down complex problems, and refining systems to
-        work seamlessly. Every project is like a puzzle, and I enjoy the
-        process of figuring out how all the pieces fit together to create
-        something meaningful. <br />
-        Curiosity fuels me. I’m always learning, experimenting, and pushing my
-        skills further. Whether it’s exploring new concepts, optimizing
-        workflows, or improving existing solutions, I’m driven by the
-        challenge of making things better. I thrive in spaces where innovation
-        meets practicality, where creativity meets logic, and where every
-        problem is an opportunity for growth.
-        <br />
-        At the core of my work is a deep passion for building and improving.
-        Because in the end, it’s not just about what you create—it’s about the
-        impact it makes and the value it brings.
-      </p>
-    </div>
-    <div class="recent-articles-container">
-      <h3 style="color: var(--primary-color)">Recent Articles</h3>
-      <div>recent articles fall here</div>
+        <a href="src/pages/blog.html"> see more</a>
+      </div>
 
-      <a href="src/pages/blog.html"> see more</a>
-    </div>
+      <div class="best-works">
+        <h3 style="color: var(--primary-color)">Best Works</h3>
+        <div>Best works fall here</div>
 
-    <div class="best-works">
-      <h3 style="color: var(--primary-color)">Best Works</h3>
-      <div>Best works fall here</div>
-
-      <a href="./src/pages/blog.html"> see more</a>
-    </div>
-  </main>
-</body>
-
+        <a href="./src/pages/blog.html"> see more</a>
+      </div>
+      <div>
+        <work-banner></work-banner>
+        <contact-Form></contact-Form>
+      </div>
+    </main>
+  </body>
 </html>
