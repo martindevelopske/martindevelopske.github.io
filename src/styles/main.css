@@ -85,13 +85,25 @@ main {
     flex-grow: 1;
     padding-top: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact-container {
     height: auto;
     width: 100%;
     display: flex;
-    gap: 2;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-bar {
+    border-bottom: 1px solid grey;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Tablets and small desktops (768px - 1024px) */
