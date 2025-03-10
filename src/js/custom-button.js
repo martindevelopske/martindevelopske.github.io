@@ -6,7 +6,7 @@ class CustomButton extends HTMLElement {
     //create a link element for the external class
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "../styles/button.css";
+    link.href = "/src/styles/button.css";
     link.onload = () => {
       console.log("css loaded...");
     };
@@ -15,7 +15,8 @@ class CustomButton extends HTMLElement {
     };
     //create the button element
     const button = document.createElement("button");
-    button.textContent = this.getAttribute("label") || "Click Me";
+    button.innerHTML = `<slot>Click Me</slot>`;
+    //button.textContent = this.getAttribute("label") || "Click Me";
 
     //append everything to the shadow dom
     this.shadowRoot.append(link, button);

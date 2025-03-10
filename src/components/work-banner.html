@@ -15,22 +15,24 @@
 
 <style>
   .banner-container {
+    /* padding: 20px; */
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to bottom,
-      var(--gradient-top),
-      var(--background-color)
-    );
+    max-width: 100%;
+    flex-shrink: 1;
+    background: linear-gradient(to bottom,
+        var(--gradient-top),
+        var(--background-color));
   }
 
   .container1 {
+    width: 70%;
     height: 100%;
-    flex-grow: 2;
-    flex-basis: 0;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -43,9 +45,8 @@
   }
 
   .container2 {
+    width: 20%;
     height: 100%;
-    flex-grow: 1;
-    flex-basis: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,6 +62,10 @@
     .banner-container {
       flex-direction: column;
       gap: 20px;
+    }
+
+    .container1 {
+      width: 90%;
     }
   }
 </style>

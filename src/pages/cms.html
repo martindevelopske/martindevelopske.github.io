@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMS</title>
+  <base href="/" target="" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <script src="https://kit.fontawesome.com/c6b912491d.js" crossorigin="anonymous" defer></script>
+  <script src="/src/js/theme.js" defer></script>
+  <script src="/src/js/custom-button.js" defer></script>
+  <script src="/src/js/header.js" defer></script>
+  <script src="/src/js/footer.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="cms-header">
+      <h1>CMS</h1>
+      <button onclick="oauth2SignIn()" id="login-btn">
+        Sign In with Google
+      </button>
+      <button onclick="logout()" id="logout-btn">Logout</button>
+    </div>
+    <div class="editors-container">
+      <div class="editor">
+        <h2>Markdown Editor</h2>
+        <textarea id="markdown-input" placeholder="Type your Markdown here..."></textarea>
+      </div>
+      <div class="preview">
+        <h3>Preview:</h3>
+        <div id="preview"></div>
+      </div>
+    </div>
+    <div class="cms-btns">
+      <custom-btn onclick="" id="draft-btn">Save Draft</custom-btn>
+      <custom-btn onclick="" id="publish-btn">Publish</button>
+    </div>
+  </main>
+  <script src="/src/js/auth.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script>
+    function updatePreview() {
+      let input = document.getElementById("markdown-input").value;
+      document.getElementById("preview").innerHTML = marked.parse(input);
+    }
+
+    document
+      .getElementById("markdown-input")
+      .addEventListener("input", updatePreview);
+  </script>
+</body>
+
+</html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - (1 * var(--header-height)));
+  }
+
+  main {
+    width: 95%;
+    height: auto;
+    min-height: 100%;
+  }
+
+  .cms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+  }
+
+  .cms-btns {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+  }
+
+  .cms-header h1 {
+    padding: 10px;
+  }
+
+  .cms-header button {
+    padding-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    border-style: none;
+  }
+
+  .editors-container {
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .editor {
+    min-height: 100%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid yellow;
+  }
+
+  .preview {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  #preview {
+    border: 1px solid gray;
+    border-radius: 10px;
+    min-height: 600px;
+    height: auto;
+    padding: 20px;
+  }
+
+  textarea {
+    width: 90%;
+    min-height: 600px;
+    padding: 20px;
+  }
+</style>

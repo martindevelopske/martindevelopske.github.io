@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 00px;
+    margin: 0px;
     padding: 10px;
     color: white;
     height: var(--header-height);
@@ -26,6 +26,7 @@
 
 .logo {
     font-size: 1.5rem;
+    font-weight: bold;
     padding: 5px;
     display: flex;
     align-items: center;
@@ -37,7 +38,6 @@ nav {
     align-items: start;
     /*align-items: center;*/
     justify-content: space-between;
-    padding-right: 35px;
 }
 
 ul {
@@ -48,6 +48,15 @@ ul {
 
 li {
     list-style: none;
+}
+
+a :hover {
+    color: green;
+}
+
+li a :active {
+    color: green;
+    border-bottom: 1px solid green;
 }
 
 /* Default icon styles */

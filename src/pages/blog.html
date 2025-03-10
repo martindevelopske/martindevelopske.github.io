@@ -25,6 +25,19 @@
       just about what I build—it’s about understanding, improving, and sharing
       that process with others.
     </div>
+    <div id="blog-posts">
+      <h2>Loading posts...</h2>
+    </div>
+
+    <script>
+      async function loadPosts() {
+        const response = await fetch("posts/post1.md"); // Load a Markdown file
+        const text = await response.text();
+        document.getElementById("blog-posts").innerHTML = marked.parse(text);
+      }
+
+      loadPosts();
+    </script>
   </main>
 </body>
 
